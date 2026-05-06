@@ -1,0 +1,73 @@
+{
+  "repo": "rivet-trade-portfolio-hub",
+  "language": "Zig",
+  "category": "Trading systems",
+  "goal": "Design a Zig verification harness for portfolio systems, covering visual model generation, layout fixtures, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "spread pressure",
+      "fill risk",
+      "portfolio drift",
+      "quote width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "spread pressure",
+      "signal": 53,
+      "slack": 43,
+      "drag": 13,
+      "confidence": 52,
+      "score": 162,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "fill risk",
+      "signal": 54,
+      "slack": 38,
+      "drag": 23,
+      "confidence": 46,
+      "score": 123,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "portfolio drift",
+      "signal": 52,
+      "slack": 53,
+      "drag": 20,
+      "confidence": 82,
+      "score": 179,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "quote width",
+      "signal": 54,
+      "slack": 39,
+      "drag": 32,
+      "confidence": 91,
+      "score": 142,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "spread pressure",
+      "signal": 62,
+      "slack": 49,
+      "drag": 10,
+      "confidence": 94,
+      "score": 237,
+      "lane": "ship"
+    }
+  ]
+}
