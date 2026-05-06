@@ -1,0 +1,17 @@
+{
+  "repo": "rivet-trade-portfolio-hub",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 162,
+    "watch": 126
+  },
+  "terms": [
+    "spread pressure",
+    "fill risk",
+    "portfolio drift",
+    "quote width"
+  ]
+}
